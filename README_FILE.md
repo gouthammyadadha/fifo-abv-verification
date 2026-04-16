@@ -85,6 +85,7 @@ FIFO behavior was correct — issue was purely due to stimulus timing.
 ##### Tools Used
 
 * Cadence Xcelium
+* Vivado
 * SystemVerilog + SVA
 
 
