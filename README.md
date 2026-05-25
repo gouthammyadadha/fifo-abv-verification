@@ -33,21 +33,7 @@ This project helped bridge the gap between simulation-only RTL understanding and
 - Read/write pointer management
 - Assertion-Based Verification
 
-```text
-+------------------------------------------------+
-|                Synchronous FIFO                |
-|                                                |
-|   +----------+        Memory       +---------+ |
-|   | Write Ptr| ------------------> |         | |
-|   +----------+                     |  FIFO   | |
-|                                    | Memory  | |
-|   +----------+ <------------------ |         | |
-|   | Read Ptr |                     +---------+ |
-|   +----------+                                   
-|                                                |
-| Full Flag  | Empty Flag | Read Data | Write Data |
-+------------------------------------------------+
-```
+
 
 ---
 
