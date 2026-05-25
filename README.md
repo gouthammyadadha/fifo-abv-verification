@@ -1,14 +1,14 @@
 # FIFO Assertion-Based Verification (ABV)
 
-A SystemVerilog-based synchronous FIFO design and verification project focused on Assertion-Based Verification (ABV), timing behavior analysis, and debugging of practical FIFO corner cases.
+This project implements and verifies a synchronous FIFO using **SystemVerilog** with a strong focus on Assertion-Based Verification (ABV), timing behavior analysis, and debugging of practical FIFO corner cases.
 
-This project explores how FIFO behavior changes depending on implementation choices such as registered reads vs combinational reads and how those choices affect latency, timing, and race conditions.
+The project explores how FIFO behavior changes depending on implementation choices such as registered reads versus combinational reads and how those choices affect latency, timing, and race conditions.
 
 ---
 
 ## Project Objective
 
-The goal of this project was not only to build a FIFO, but to understand:
+The objective of this project was not only to implement a FIFO, but also to understand:
 
 - synchronous FIFO behavior
 - timing relationships
@@ -18,7 +18,7 @@ The goal of this project was not only to build a FIFO, but to understand:
 - assertion-based verification
 - waveform-driven debugging
 
-The project was used as a bridge between simulation-only RTL understanding and real hardware-oriented thinking.
+This project helped bridge the gap between simulation-only RTL understanding and hardware-oriented verification thinking.
 
 ---
 
@@ -107,15 +107,15 @@ Disadvantages:
 
 ---
 
-## Timing Observation
+## Timing Observations
 
-A key debugging observation was:
+Key observations during debugging:
 
-- read enable activated on one edge
-- read data becoming visible mid-cycle
+- read enable activating on one edge
+- read data appearing mid-cycle
 - interaction between stimulus edge and RTL sampling edge
 
-This led to investigation of:
+This led to exploration of:
 
 - sampling edge behavior
 - clock-to-Q delay concepts
@@ -124,15 +124,13 @@ This led to investigation of:
 
 ---
 
-## Practical Learning Outcomes
+## Key Learning Outcomes
 
-This project helped develop understanding of:
-
-- why synchronous designs intentionally use registered outputs
-- why some latency is acceptable for timing reliability
-- how race conditions appear in simulation
-- differences between ideal simulation behavior and synthesizable hardware behavior
-- how waveform debugging helps identify protocol/timing issues
+- Understanding why synchronous FIFOs commonly use registered outputs
+- Understanding timing versus latency tradeoffs
+- Identifying race conditions in simulation
+- Understanding differences between simulation behavior and synthesizable hardware behavior
+- Using waveform analysis to debug timing-related issues
 
 ---
 
@@ -144,45 +142,3 @@ This project helped develop understanding of:
 - SimVision
 - GTKWave
 - Linux simulation workflow
-
----
-
-## Suggested Repository Structure
-
-```text
-fifo-abv-verification/
-├── rtl/              # FIFO RTL
-├── tb/               # Testbench
-├── assertions/       # SVA properties
-├── waveforms/        # Simulation screenshots
-├── docs/             # Timing/debug notes
-└── README.md
-```
-
----
-
-## Portfolio Relevance
-
-Relevant for:
-
-- Design Verification
-- Assertion-Based Verification
-- RTL Debugging
-- FPGA Validation
-- Timing Analysis
-- Hardware-Oriented Verification
-- Junior ASIC/SoC DV roles
-
----
-
-## Future Improvements
-
-Planned future work:
-
-- FPGA deployment
-- timing constraint experiments
-- CDC-based FIFO exploration
-- asynchronous FIFO implementation
-- functional coverage
-- constrained-random testing
-- formal verification experiments
